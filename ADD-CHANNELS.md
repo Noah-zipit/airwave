@@ -83,3 +83,14 @@ Delete its entry from `public/channels.json`, commit, push.
 The player shows a friendly "stream is down" message, so one dead channel
 never breaks the site. Remove the entry or replace the `stream` URL with a
 working one.
+
+## Stream requirements
+
+A stream only plays in the browser when **all** of these hold:
+
+1. Served over **HTTPS** (no mixed content)
+2. Responds with **HTTP 200**
+3. Body starts with `#EXTM3U` (a real HLS playlist)
+4. Response includes `Access-Control-Allow-Origin: *`
+
+Run `scripts/check-streams.sh` to probe every channel against these rules before adding it.
