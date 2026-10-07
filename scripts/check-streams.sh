@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # Airwave stream-health checker.
 # Reads public/channels.json, probes every stream URL, and reports dead ones.
 # A stream is "alive" only if ALL of these hold:
