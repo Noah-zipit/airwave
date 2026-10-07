@@ -9,10 +9,14 @@ Edit it, commit, push — Vercel redeploys automatically.
    Never add premium or subscription channels (no Star Sports, Sky Sports,
    HBO, etc.). If a stream looks like a pirated premium feed, leave it out —
    that is what gets sites taken down.
-2. Test the URL first — it must return HTTP 200 and a playlist starting
-   with `#EXTM3U`:
+2. Test the URL first — it must pass ALL three checks (HTTP 200, a playlist
+   starting with `#EXTM3U`, AND a CORS-open response). The CORS check is the
+   important one: without `Access-Control-Allow-Origin: *` the stream loads
+   fine for curl and VLC but the browser refuses to play it.
    ```bash
-   curl -sL -m 15 -A "Mozilla/5.0" "PASTE_URL_HERE" | head -c 100
+   curl -sL --compressed -m 15 -A "Mozilla/5.0" -D - -o /tmp/t.m3u8 "PASTE_URL_HERE"
+   head -c 7 /tmp/t.m3u8   # must print #EXTM3U
+   # the dumped headers must contain: access-control-allow-origin: *
    ```
 3. Find a logo image URL for the channel (a direct `.png`/`.jpg` link works).
 4. Add one entry to `public/channels.json`:
@@ -28,7 +32,7 @@ Edit it, commit, push — Vercel redeploys automatically.
    ```
    - `id`: next free number (must be unique).
    - `category`: one of `News`, `Sports`, `Entertainment`, `Kids`, `Music`, `Documentary`.
-   - `country`: 2-letter code, or `INT` for international.
+   - `country`: full country name (e.g. `Germany`), or empty string for international.
 5. Commit and push:
    ```bash
    git add public/channels.json

@@ -5,270 +5,270 @@
   "logo": "https://i.imgur.com/7bRVpnu.png",
   "stream": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
   "category": "News",
-  "country": "QA"
+  "country": "Qatar"
  },
  {
   "id": 2,
-  "name": "NHK World Japan",
-  "logo": "https://i.imgur.com/Mhw1Ihk.png",
-  "stream": "https://master.nhkworld.jp/nhkworld-tv/playlist/live.m3u8",
-  "category": "News",
-  "country": "JP"
- },
- {
-  "id": 3,
   "name": "TRT World",
   "logo": "https://i.imgur.com/JEA2xpv.png",
   "stream": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
   "category": "News",
-  "country": "TR"
+  "country": "Türkiye"
  },
  {
-  "id": 4,
+  "id": 3,
   "name": "France 24 English",
   "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png",
   "stream": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8",
   "category": "News",
-  "country": "FR"
+  "country": "France"
  },
  {
-  "id": 5,
-  "name": "Bloomberg TV",
-  "logo": "https://i.imgur.com/VnCcH73.png",
-  "stream": "https://bloomberg.com/media-manifest/streams/us.m3u8",
-  "category": "News",
-  "country": "US"
- },
- {
-  "id": 6,
+  "id": 4,
   "name": "Sky News Arabia",
   "logo": "https://i.imgur.com/SvjU4h6.png",
   "stream": "https://live-stream.skynewsarabia.com/c-horizontal-channel/horizontal-stream/index.m3u8",
   "category": "News",
-  "country": "AE"
+  "country": "United Arab Emirates"
  },
  {
-  "id": 7,
+  "id": 5,
   "name": "Euronews",
   "logo": "https://images-2.rakuten.tv/storage/global-live-channel/translation/artwork/bc84c3b7-6008-4ee3-8f6a-e4bb4365f082-width200-quality90.jpeg",
   "stream": "https://cdn-euronews.akamaized.net/live/eds/euronews-pl/26382/index.m3u8",
   "category": "News",
-  "country": "EU"
+  "country": "Europe"
  },
  {
-  "id": 8,
-  "name": "ABC News Live",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/ABC_News_Live_logo_2021.svg/960px-ABC_News_Live_logo_2021.svg.png",
-  "stream": "https://abcnews-streams.akamaized.net/hls/live/2023560/abcnewshudson1/master.m3u8",
-  "category": "News",
-  "country": "US"
- },
- {
-  "id": 9,
-  "name": "TRACE Sport Stars",
-  "logo": "https://i.imgur.com/FabFP5A.png",
-  "stream": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8",
-  "category": "Sports",
-  "country": "INT"
- },
- {
-  "id": 10,
-  "name": "Stories by AMC",
-  "logo": "https://i.imgur.com/QJtwJoS.png",
-  "stream": "https://amc-amcpresents-1-us.xumo.wurl.tv/playlist.m3u8",
-  "category": "Entertainment",
-  "country": "US"
- },
- {
-  "id": 11,
+  "id": 6,
   "name": "NHK World Premium",
   "logo": "https://i.imgur.com/4ESi2La.png",
   "stream": "https://media-tyo.hls.nhkworld.jp/hls/wp/live/master.m3u8",
   "category": "Entertainment",
-  "country": "JP"
+  "country": "Japan"
  },
  {
-  "id": 12,
-  "name": "Moonbug Kids",
-  "logo": "https://i.imgur.com/vZHtxQb.png",
-  "stream": "https://moonbug-rokuus.amagi.tv/playlist.m3u8",
-  "category": "Kids",
-  "country": "US"
- },
- {
-  "id": 13,
+  "id": 7,
   "name": "Ninja Kidz TV",
   "logo": "https://i.imgur.com/7EngqUi.png",
   "stream": "https://d3868b4ny0rgdf.cloudfront.net/playlist.m3u8",
   "category": "Kids",
-  "country": "US"
+  "country": "United States"
  },
  {
-  "id": 14,
+  "id": 8,
   "name": "Clubbing TV",
   "logo": "https://i.imgur.com/MyiA92q.png",
   "stream": "https://a-cdn.klowdtv.com/live3/clubbingtv_720p/playlist.m3u8",
   "category": "Music",
-  "country": "INT"
+  "country": ""
  },
  {
-  "id": 15,
+  "id": 9,
   "name": "Qello Concerts",
   "logo": "https://i.imgur.com/IRyFTWq.png",
   "stream": "https://lotus.stingray.com/manifest/qello-qello001-montreal/samsungtvplus/master.m3u8",
   "category": "Music",
-  "country": "INT"
+  "country": ""
  },
  {
-  "id": 16,
-  "name": "TRACE Urban",
-  "logo": "https://i.imgur.com/DLIbUMx.png",
-  "stream": "https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8",
-  "category": "Music",
-  "country": "INT"
- },
- {
-  "id": 17,
+  "id": 10,
   "name": "Stingray Naturescape",
   "logo": "https://i.imgur.com/882kd90.png",
   "stream": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8",
   "category": "Music",
-  "country": "INT"
+  "country": ""
  },
  {
-  "id": 18,
+  "id": 11,
   "name": "Trace Africa",
   "logo": "https://www.hypresslive.com/wp-content/uploads/2025/12/9cf0931b-5e1e-16da-515a-bd203ca3c928-1536x1074.png",
   "stream": "https://channels.trace.plus/Traceprod/AFRICA_EN_hd/index.m3u8",
   "category": "Music",
-  "country": "INT"
+  "country": ""
  },
  {
-  "id": 19,
-  "name": "Bloomberg Originals",
-  "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Bloomberg_Originals.png",
-  "stream": "https://bloomberg.com/media-manifest/streams/qt.m3u8",
-  "category": "Documentary",
-  "country": "US"
- },
- {
-  "id": 20,
-  "name": "CGTN Documentary",
-  "logo": "https://i.imgur.com/JHv0WxM.png",
-  "stream": "https://news.cgtn.com/resource/live/document/cgtn-doc.m3u8",
-  "category": "Documentary",
-  "country": "CN"
- },
- {
-  "id": 21,
+  "id": 12,
   "name": "CGTN Documentary 2",
   "logo": "https://i.imgur.com/JHv0WxM.png",
   "stream": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
   "category": "Documentary",
-  "country": "DE"
+  "country": "China"
  },
  {
-  "id": 22,
+  "id": 13,
   "name": "DW News",
   "logo": "https://i.imgur.com/8MRNFb9.png",
   "stream": "https://amg01644-amg01644c1-amgplt0343.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg01644-amg01644c1-amgplt0343/playlist.m3u8",
   "category": "News",
-  "country": "DE"
+  "country": "Germany"
  },
  {
-  "id": 23,
+  "id": 14,
   "name": "FITE 24/7",
   "logo": "https://i.imgur.com/ESV6qgH.png",
   "stream": "https://d3d85c7qkywguj.cloudfront.net/scheduler/scheduleMaster/263.m3u8",
   "category": "Sports",
-  "country": "INT"
+  "country": ""
  },
  {
-  "id": 24,
+  "id": 15,
   "name": "FloRacing",
   "logo": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/floracing-white.png",
   "stream": "https://amg02278-amg02278c1-flosports-worldwide-7592.playouts.now.amagi.tv/playlist.m3u8",
   "category": "Sports",
-  "country": "US"
+  "country": "United States"
  },
  {
-  "id": 25,
-  "name": "Fubo Sports Network",
-  "logo": "https://i.imgur.com/qFNRJLb.png",
-  "stream": "https://dnf08l6u6uxnz.cloudfront.net/master.m3u8",
-  "category": "Sports",
-  "country": "US"
- },
- {
-  "id": 26,
+  "id": 16,
   "name": "DD Sports",
   "logo": "https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540",
   "stream": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
   "category": "Sports",
-  "country": "IN"
+  "country": "India"
  },
  {
-  "id": 27,
-  "name": "ESPN8: The Ocho",
-  "logo": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png",
-  "stream": "https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8",
-  "category": "Sports",
-  "country": "US"
- },
- {
-  "id": 28,
+  "id": 17,
   "name": "ALLBLK Gems",
   "logo": "https://i.imgur.com/gnkepQJ.png",
   "stream": "https://df1zke3zj042m.cloudfront.net/playlist.m3u8",
   "category": "Entertainment",
-  "country": "INT"
+  "country": ""
  },
  {
-  "id": 29,
+  "id": 18,
   "name": "American Crime Channel",
   "logo": "https://provider-static.plex.tv/epg/cms/production/5d4ac35c-dd3f-4f56-a272-41ebfe3477a9/american_crime_channel_dark_logo_-_Kam_JeyRDXV2.png",
   "stream": "https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883104",
   "category": "Entertainment",
-  "country": "INT"
+  "country": ""
  },
  {
-  "id": 30,
-  "name": "Bounce XL",
-  "logo": "https://i.imgur.com/GzxgSkc.png",
-  "stream": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-bouncexl-tablo/playlist.m3u8",
-  "category": "Entertainment",
-  "country": "INT"
- },
- {
-  "id": 31,
-  "name": "Circle",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Circle_Network_logo.svg/960px-Circle_Network_logo.svg.png",
-  "stream": "https://circle-roku.amagi.tv/playlist.m3u8",
-  "category": "Entertainment",
-  "country": "INT"
- },
- {
-  "id": 32,
+  "id": 19,
   "name": "Baby Shark TV",
   "logo": "https://i.imgur.com/SbBKr8L.png",
   "stream": "https://newidco-babysharktv-1-us.roku.wurl.tv/playlist.m3u8",
   "category": "Kids",
-  "country": "INT"
+  "country": ""
  },
  {
-  "id": 33,
-  "name": "Kartoon Channel!",
-  "logo": "https://i.imgur.com/1luzP3T.png",
-  "stream": "https://lightning-fnf-samsungaus.amagi.tv/playlist.m3u8",
-  "category": "Kids",
-  "country": "INT"
- },
- {
-  "id": 34,
+  "id": 20,
   "name": "Mr Bean Animated",
   "logo": "https://static.wikia.nocookie.net/logopedia/images/2/25/Mr._Bean_Animated_Series_stacked_logo.png",
   "stream": "https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8",
   "category": "Kids",
-  "country": "INT"
+  "country": ""
+ },
+ {
+  "name": "Al Arabiya English",
+  "logo": "https://shahid.mbc.net/mediaObject/7cfc0baf-1201-477f-b722-d3099fafe17f?height=240",
+  "stream": "https://live.alarabiya.net/alarabiapublish/english/playlist_dvr.m3u8",
+  "category": "News",
+  "country": "United Arab Emirates",
+  "id": 21
+ },
+ {
+  "name": "Newsmax TV",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Newsmax_logo.svg/960px-Newsmax_logo.svg.png",
+  "stream": "https://nmx1ota.akamaized.net/hls/live/2107010/Live_1/index.m3u8",
+  "category": "News",
+  "country": "United States",
+  "id": 22
+ },
+ {
+  "name": "Rudaw TV",
+  "logo": "https://i.imgur.com/Zo3IWOn.png",
+  "stream": "https://hlspackager.akamaized.net/live/DB/RUDAW/HLS/RUDAW.m3u8",
+  "category": "News",
+  "country": "Iraq",
+  "id": 23
+ },
+ {
+  "name": "Nautical Channel",
+  "logo": "https://i.imgur.com/2ByDyzL.png",
+  "stream": "https://a-cdn.klowdtv.com/live2/nautical_720p/playlist.m3u8",
+  "category": "Sports",
+  "country": "",
+  "id": 24
+ },
+ {
+  "name": "MMA TV",
+  "logo": "https://i.imgur.com/QhdxNsB.png",
+  "stream": "https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8",
+  "category": "Sports",
+  "country": "",
+  "id": 25
+ },
+ {
+  "name": "World Poker Tour",
+  "logo": "https://i.imgur.com/98kLMjj.png",
+  "stream": "https://d2e00kr7m9coe4.cloudfront.net/scheduler/scheduleMaster/406.m3u8",
+  "category": "Sports",
+  "country": "United States",
+  "id": 26
+ },
+ {
+  "name": "Absolute Reality by WE tv",
+  "logo": "https://i.imgur.com/Gtwk8ic.png",
+  "stream": "https://amc-absolutereality-1-us.plex.wurl.tv/playlist.m3u8",
+  "category": "Entertainment",
+  "country": "United States",
+  "id": 27
+ },
+ {
+  "name": "30A Television",
+  "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHiYfIB01K44LIBG81aEGAmDu",
+  "stream": "https://30a-tv.com/feeds/masters/30atv.m3u8",
+  "category": "Entertainment",
+  "country": "United States",
+  "id": 28
+ },
+ {
+  "name": "Cartoon Classics",
+  "logo": "https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/3227",
+  "stream": "https://daiconnect.com/live/hls/tvup/rk-cartoonclassics/578f4b7eb725168349ec0af81b21d388/index.m3u8",
+  "category": "Kids",
+  "country": "",
+  "id": 29
+ },
+ {
+  "name": "Chikitoonz",
+  "logo": "https://chikitoonz.com/cdn/shop/t/30/assets/logo-chikitv.webp?v=169619911870747285041790954001",
+  "stream": "http://45.70.201.81:8000/play/a00p/index.m3u8",
+  "category": "Kids",
+  "country": "",
+  "id": 30
+ },
+ {
+  "name": "Stingray Classica",
+  "logo": "https://i.imgur.com/nh1k5RC.png",
+  "stream": "https://lotus.stingray.com/manifest/classica-cla008-montreal/samsungtvplus/master.m3u8",
+  "category": "Music",
+  "country": "Canada",
+  "id": 31
+ },
+ {
+  "name": "Asharq Documentary",
+  "logo": "https://i.imgur.com/v6VsFEt.png",
+  "stream": "https://svs.itworkscdn.net/asharqdocumentarylive/asharqdocumentary.smil/playlist_dvr.m3u8",
+  "category": "Documentary",
+  "country": "United Arab Emirates",
+  "id": 32
+ },
+ {
+  "name": "WaterBear",
+  "logo": "https://framerusercontent.com/images/41VQQ7F0fYlp1MX1N4Ixog5QnPI.png",
+  "stream": "https://amg01415-waterbearnetwor-waterbear-samsunguk-1h0y8.amagi.tv/playlist/amg01415-waterbearnetwor-waterbear-samsunguk/playlist.m3u8",
+  "category": "Documentary",
+  "country": "United Kingdom",
+  "id": 33
+ },
+ {
+  "name": "Court TV",
+  "logo": "https://i.imgur.com/jOKA735.png",
+  "stream": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo/playlist.m3u8",
+  "category": "Entertainment",
+  "country": "United States",
+  "id": 34
  }
 ]
