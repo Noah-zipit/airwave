@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://airwave-psi.vercel.app/sitemap.xml

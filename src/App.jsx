@@ -377,7 +377,7 @@ export default function App() {
         </section>
 
         <section className="pt-8" aria-label="Browse channels">
-          <h2 className="text-xl font-bold text-cream">Browse channels</h2>
+          <h1 className="text-xl font-bold text-cream">Browse channels</h1>
           <div className="nice-scroll mt-4 flex gap-2 overflow-x-auto pb-2" role="tablist" aria-label="Categories">
             {CATEGORIES.map((c) => (
               <button
@@ -416,6 +416,47 @@ export default function App() {
           <p className="text-muted text-xs">{channels.length} channels · checked working</p>
         </div>
       </footer>
+
+      <CookieBanner />
+    </div>
+  )
+}
+
+function CookieBanner() {
+  const [visible, setVisible] = useState(() => {
+    try {
+      return !localStorage.getItem('airwave-cookie-ok')
+    } catch {
+      return true
+    }
+  })
+
+  if (!visible) return null
+
+  const accept = () => {
+    try {
+      localStorage.setItem('airwave-cookie-ok', '1')
+    } catch {}
+    setVisible(false)
+  }
+
+  return (
+    <div
+      role="dialog"
+      aria-label="Cookie notice"
+      className="fixed bottom-0 inset-x-0 z-30 px-4 pb-4 sm:pb-6 flex justify-center pointer-events-none"
+    >
+      <div className="pointer-events-auto w-full max-w-xl rounded-xl bg-panel border border-panel2 px-4 py-3 flex items-center gap-4 shadow-lg">
+        <p className="text-sm text-muted flex-1">
+          Airwave uses minimal cookies to remember your preferences. No tracking, no ads.
+        </p>
+        <button
+          onClick={accept}
+          className="shrink-0 rounded-lg bg-accent text-ink text-sm font-semibold px-4 py-2 hover:brightness-110 transition"
+        >
+          Accept
+        </button>
+      </div>
     </div>
   )
 }
