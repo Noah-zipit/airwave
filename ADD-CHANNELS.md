@@ -1,7 +1,41 @@
 # Adding or removing channels on Airwave
 
-The whole channel list lives in one file: `public/channels.json`.
-Edit it, commit, push — Vercel redeploys automatically.
+Two ways to manage channels:
+
+**A. Admin panel (recommended):** open `/admin` on the live site, sign in with
+the admin password, and use the web UI — add / edit / delete / enable-disable,
+plus a one-click "Check all streams" health probe that runs in your browser.
+
+**B. By hand:** the baked channel list lives in `public/channels.json`.
+Edit it, commit, push — Vercel redeploys automatically. (Note: once the admin
+panel has saved changes to Vercel Blob, the Blob copy takes precedence over
+this file. To go back to the file, delete the `channels.json` blob.)
+
+## Admin panel setup (one-time)
+
+In the Vercel dashboard → project → Settings → Environment Variables, add:
+
+| Variable | Value |
+|---|---|
+| `ADMIN_PASSWORD` | a strong password (this gates `/admin` and `/api/admin/*`) |
+| `BLOB_READ_WRITE_TOKEN` | token from a Vercel Blob store (Storage tab → create store → copy token) |
+
+Then redeploy. Without `BLOB_READ_WRITE_TOKEN`, the panel shows a warning and
+changes cannot be saved; the site keeps serving the baked `channels.json`.
+
+## Program guide (EPG)
+
+`public/epg.json` holds baked now/next data (built by `scripts/build-epg.py`,
+source: i.mjh.nz community EPG). Refresh it manually when it goes stale:
+
+```bash
+python3 scripts/build-epg.py   # downloads feeds, matches channels, bakes epg.json
+git add public/epg.json public/epg-meta.json
+git commit -m "Refresh EPG"
+git push
+```
+
+The `/admin` header shows when the guide was last refreshed and its coverage.
 
 ## Add a channel
 

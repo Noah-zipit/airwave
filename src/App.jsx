@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
-const CATEGORIES = ['All', 'News', 'Sports', 'Entertainment', 'Kids', 'Music', 'Documentary']
+const CATEGORIES = ['All', 'News', 'Sports', 'Entertainment', 'Kids', 'Music', 'Documentary', 'Anime']
 
 function IconPlay() {
   return (
@@ -44,7 +44,8 @@ function IconFullscreen() {
   )
 }
 
-function Player({ channel, sectionRef }) {
+function Player({ channel, sectionRef, epg }) {
+  const guide = channel ? epg?.[String(channel.id)] : null
   const videoRef = useRef(null)
   const boxRef = useRef(null)
   const hlsRef = useRef(null)
@@ -279,13 +280,25 @@ function Player({ channel, sectionRef }) {
           <p className="text-muted text-sm mt-1">
             {channel.category}{channel.country ? ` · ${channel.country}` : ''}
           </p>
+          {guide && (guide.now || guide.next) && (
+            <p className="text-sm mt-1.5 text-cream/80">
+              {guide.now && (
+                <span><span className="text-accent font-semibold">Now:</span> {guide.now.title}</span>
+              )}
+              {guide.now && guide.next && <span className="text-muted"> · </span>}
+              {guide.next && (
+                <span><span className="text-muted">Next:</span> {guide.next.title}</span>
+              )}
+            </p>
+          )}
         </div>
       )}
     </div>
   )
 }
 
-function ChannelCard({ channel, active, onSelect }) {
+function ChannelCard({ channel, active, onSelect, epg }) {
+  const guide = epg?.[String(channel.id)]
   return (
     <button
       type="button"
@@ -307,6 +320,11 @@ function ChannelCard({ channel, active, onSelect }) {
       <div className="p-3">
         <p className="text-cream text-sm font-semibold truncate">{channel.name}</p>
         {channel.country && <p className="text-muted text-xs mt-0.5">{channel.country}</p>}
+        {guide?.now && (
+          <p className="text-accent/90 text-xs mt-1 truncate" title={guide.now.title}>
+            Now: {guide.now.title}
+          </p>
+        )}
       </div>
     </button>
   )
@@ -318,13 +336,44 @@ export default function App() {
   const [category, setCategory] = useState('All')
   const [query, setQuery] = useState('')
   const [current, setCurrent] = useState(null)
+  const [epg, setEpg] = useState({})
   const playerSectionRef = useRef(null)
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}channels.json`)
-      .then((r) => { if (!r.ok) throw new Error('bad'); return r.json() })
-      .then((data) => { setChannels(data); setCurrent(data[0] || null) })
-      .catch(() => setFailed(true))
+    // Prefer the live channel list from the API (admin-managed, Vercel Blob);
+    // fall back to the baked channels.json when the API is unavailable.
+    const load = async () => {
+      try {
+        const r = await fetch('/api/channels')
+        if (r.ok) {
+          const data = await r.json()
+          const list = Array.isArray(data) ? data : []
+          if (list.length > 0) {
+            const visible = list.filter((c) => c.enabled !== false)
+            setChannels(visible)
+            setCurrent(visible[0] || null)
+            return
+          }
+        }
+        throw new Error('api unavailable')
+      } catch {
+        try {
+          const r2 = await fetch(`${import.meta.env.BASE_URL}channels.json`)
+          if (!r2.ok) throw new Error('bad')
+          const data2 = await r2.json()
+          const visible2 = (Array.isArray(data2) ? data2 : []).filter((c) => c.enabled !== false)
+          setChannels(visible2)
+          setCurrent(visible2[0] || null)
+        } catch {
+          setFailed(true)
+        }
+      }
+    }
+    load()
+    fetch(`${import.meta.env.BASE_URL}epg.json`)
+      .then((r) => (r.ok ? r.json() : {}))
+      .then((d) => setEpg(d || {}))
+      .catch(() => {})
   }, [])
 
   const selectChannel = (ch) => {
@@ -373,7 +422,7 @@ export default function App() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 pb-16">
         <section className="pt-6 scroll-mt-20" aria-label="Now playing">
-          <Player channel={current} sectionRef={playerSectionRef} />
+          <Player channel={current} sectionRef={playerSectionRef} epg={epg} />
         </section>
 
         <section className="pt-8" aria-label="Browse channels">
@@ -403,7 +452,7 @@ export default function App() {
           ) : (
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {filtered.map((ch) => (
-                <ChannelCard key={ch.id} channel={ch} active={current && current.id === ch.id} onSelect={selectChannel} />
+                <ChannelCard key={ch.id} channel={ch} active={current && current.id === ch.id} onSelect={selectChannel} epg={epg} />
               ))}
             </div>
           )}
