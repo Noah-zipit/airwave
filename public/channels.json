@@ -232,12 +232,11 @@
     "id": 29
   },
   {
-    "name": "Chikitoonz",
-    "logo": "https://chikitoonz.com/cdn/shop/t/30/assets/logo-chikitv.webp?v=169619911870747285041790954001",
-    "stream": "http://45.70.201.81:8000/play/a00p/index.m3u8",
+    "name": "ToonGoggles",
+    "logo": "https://i.imgur.com/JMnxswq.png",
+    "stream": "https://amg01329-otterainc-toongoggles-samsungau-ad-4c.amagi.tv/playlist/amg01329-otterainc-toongoggles-samsungau/playlist.m3u8",
     "category": "Kids",
-    "country": "",
-    "id": 30
+    "country": "United States"
   },
   {
     "name": "Stingray Classica",
