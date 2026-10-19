@@ -2,7 +2,16 @@
   "name": "airwave",
   "private": true,
   "version": "1.0.0",
-  "description": "Curated live-TV streaming in the browser — 54 free-to-air channels across 7 categories, hls.js playback with now/next guide.",
+  "description": "Curated live-TV streaming in the browser \u2014 54 free-to-air channels across 7 categories, hls.js playback with now/next guide.",
+  "keywords": [
+    "live-tv",
+    "streaming",
+    "free-channels",
+    "news",
+    "sports",
+    "vite",
+    "hls"
+  ],
   "author": "Ashar Qaisar <noahext994@gmail.com>",
   "license": "MIT",
   "type": "module",
