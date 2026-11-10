@@ -10,14 +10,6 @@ function IconPlay() {
   )
 }
 
-function IconPause() {
-  return (
-    <svg viewBox="0 0 24 24" className="w-8 h-8" fill="currentColor" aria-hidden="true">
-      <path d="M7 5h4v14H7zM13 5h4v14h-4z" />
-    </svg>
-  )
-}
-
 function IconVolume() {
   return (
     <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -46,6 +38,7 @@ function IconFullscreen() {
 
 function Player({ channel, sectionRef, epg }) {
   const guide = channel ? epg?.[String(channel.id)] : null
+  const channelId = channel?.id
   const videoRef = useRef(null)
   const boxRef = useRef(null)
   const hlsRef = useRef(null)
@@ -118,7 +111,7 @@ function Player({ channel, sectionRef, epg }) {
       if (hlsRef.current) { hlsRef.current.destroy(); hlsRef.current = null }
       if (hideTimer.current) clearTimeout(hideTimer.current)
     }
-  }, [channel && channel.id, attempt])
+  }, [channelId, attempt])
 
   const togglePlay = () => {
     const video = videoRef.current
