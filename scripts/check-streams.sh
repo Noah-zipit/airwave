@@ -9,7 +9,6 @@ set -euo pipefail
 #      (without it the playlist loads for curl/VLC but the browser refuses
 #      to play it — this was the cause of the Oct 2026 "stream is down" wave).
 # Exit 0 = all healthy.
-set -u
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 JSON="$ROOT/public/channels.json"
@@ -25,7 +24,7 @@ while IFS=$'\t' read -r id name stream; do
   count=$((count+1))
   # NOTE: the Origin header matters — many CDNs only send CORS headers when
   # the request carries one, exactly like a real browser does.
-  code="$(curl -sL --compressed -m 15 -A "$UA" -H "Origin: https://airwave-psi.vercel.app" -D "$TMPDIR_WORK/hdrs_$id" -o "$TMPDIR_WORK/body_$id" -w "%{http_code}" "$stream" 2>/dev/null || echo 000)"
+  code="$(curl -sL --compressed -m 15 -A "$UA" -H "Origin: https://watchairwave.vercel.app" -D "$TMPDIR_WORK/hdrs_$id" -o "$TMPDIR_WORK/body_$id" -w "%{http_code}" "$stream" 2>/dev/null || echo 000)"
   head="$(head -c 7 "$TMPDIR_WORK/body_$id" 2>/dev/null)"
   cors="$(grep -im1 '^access-control-allow-origin:' "$TMPDIR_WORK/hdrs_$id" 2>/dev/null || true)"
   if [ "$code" != "200" ] || [ "$head" != "#EXTM3U" ] || [ -z "$cors" ]; then
