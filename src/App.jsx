@@ -111,7 +111,7 @@ function Player({ channel, sectionRef, epg }) {
       if (hlsRef.current) { hlsRef.current.destroy(); hlsRef.current = null }
       if (hideTimer.current) clearTimeout(hideTimer.current)
     }
-  }, [channelId, attempt])
+  }, [channelId, channel, attempt])
 
   const togglePlay = () => {
     const video = videoRef.current
